@@ -6,7 +6,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const app = express();
-app.use(cors({origin: process.env.ORIGIN})); 
+app.use(cors({ origin: process.env.ORIGIN, credentials: true, }));
 app.use(express.json());
 
 mongoose.connect(process.env.ATLAS_URI, {
@@ -22,7 +22,7 @@ const addPlantRoute = require('./routes/addPlant.js');
 const deletePlantRoute = require('./routes/deletePlant.js');
 const updatePlantRoute = require('./routes/updatePlant.js');
 
-app.use("/upload/images", express.static("upload/images"));   
+app.use("/upload/images", express.static("upload/images"));
 
 app.use('/api', getPlantRoute);
 app.use('/api', getDetailRoute);
