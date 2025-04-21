@@ -59,7 +59,7 @@ const plantsData = [
       {
         id: "PL007",
         name: "English Ivy",
-        image: "english-ivy.jpg", // Thêm link ảnh thực tế ở đây
+        image: "english-ivy.jpg", 
         description: "Removes airborne mold and improves indoor air quality.",
         cost: "$16",
         status: "",
@@ -67,7 +67,7 @@ const plantsData = [
       {
         id: "PL008",
         name: "Areca Palm",
-        image: "areca-palm.jpg", // Thêm link ảnh thực tế ở đây
+        image: "areca-palm.jpg", 
         description: "Natural humidifier that filters toxins from the air.",
         cost: "$22",
         status: "",
