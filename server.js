@@ -5,8 +5,19 @@ const dotenv = require('dotenv');
 const cookieParser = require('cookie-parser');
 const authRoutes = require('./routes/authRoutes');
 const plantRoutes = require('./routes/plantRoutes');
+const fs = require('fs');
+const path = require('path');
 
 dotenv.config();
+
+const uploadDir = path.join(__dirname, 'upload', 'images');
+fs.mkdir(uploadDir, { recursive: true }, (err) => {
+  if (err) {
+    console.error('Error creating upload/images directory:', err);
+  } else {
+    console.log('upload/images directory is ready');
+  }
+});
 
 const app = express();
 
